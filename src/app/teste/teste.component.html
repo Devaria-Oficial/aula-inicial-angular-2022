@@ -1,0 +1,30 @@
+<h1>{{ title }}</h1>
+
+<h2>Hora atual: {{ obterHoraAtual() }}</h2>
+
+<button (click)="aoClicarNoBotao()">Incrementar</button>
+<p>Valor atual: {{ valorAtual }}</p>
+
+<input
+    type="text"
+    [placeholder]="placeHolder"
+    [(ngModel)]="nomePessoa"
+/>
+
+<h2>O nome digitado foi: {{ nomePessoa }}</h2>
+
+<h3 *ngIf="jaENoite()">Boa noite</h3>
+<h3 *ngIf="jaETarde()">Boa tarde</h3>
+<h3 *ngIf="jaEDia()">Bom dia</h3>
+
+<hr/>
+<h1>Nome das pessoas:</h1>
+<div *ngFor="let nome of nomes">
+    <h3>
+        Aluno: {{ nome }}
+    </h3>
+</div>
+
+<a routerLink="/teste2/douglas">
+    link para teste2
+</a>
